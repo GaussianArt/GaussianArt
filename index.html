@@ -65,276 +65,6 @@
 </section>
 
 
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="has-text-centered">
-        <h2 class="title is-3">Simulation in IsaacSim</h2>
-      </div>
-      <br><br>
-      <video autoplay controals loop muted>
-        <source src="./video/isaac.mp4" type="video/mp4">
-      </video>
-    </div>
-  </div>
-</section>
-
-
-<!-- Paper abstract -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Abstract</h2>
-          <div class="content has-text-justified">
-            <p>
-              Building articulated objects is a key challenge in computer
-              vision. Existing methods often fail to effectively integrate information across
-              different object states, limiting the accuracy of part-mesh reconstruction and part
-              dynamics modeling, particularly for complex multi-part articulated objects. We
-              introduce ArtGS, a novel approach that leverages 3D Gaussians as a flexible and
-              efficient representation to address these issues. Our method incorporates canonical
-              Gaussians with coarse-to-fine initialization and updates for aligning articulated
-              part information across different object states, and employs a skinning-inspired
-              part dynamics modeling module to improve both part-mesh reconstruction and
-              articulation learning. Extensive experiments on both synthetic and real-world
-              datasets, including a new benchmark for complex multi-part objects, demonstrate
-              that ArtGS achieves state-of-the-art performance in joint parameter estimation
-              and part mesh reconstruction. Our approach significantly improves reconstruction
-              quality and efficiency, especially for multi-part articulated objects. Additionally, we
-              provide comprehensive analyses of our design choices, validating the effectiveness
-              of each component to highlight potential areas for future improvement.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
-
-
-<!-- Paper abstract -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Method Overview</h2>
-          <div class="content has-text-justified">
-            <img src="static/images/method.png"/>
-            <p>
-              The overview of ArtGS. Our method is divided into two stages: (i) obtaining coarse canonical
-              Gaussians \(G^c_{\text{init}}\) by matching the Gaussians \(G^0_{\text{single}}\) and \(G^1_{\text{single}}\) 
-              trained with each single-state individually and
-              initializing the part assignment module with clustered centers, (ii) jointly optimizing canonical Gaussians \(G^c\)
-              and the articulation model (including the articulation parameters \(\Phi\) and the part assignment module).
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
-
-<!-- Teaser demo-->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div id="teaser-demo" class="container is-max-desktop">
-      <div class="has-text-centered">
-        <h2 class="title is-3">Interactable Meshes of Complex Synthetic Objects</h2>
-        <h2 class="subtitle"><sup>*</sup>Drag mouse to rotate & scroll wheel to zoom in/out</h2>
-      </div>
-      <div class="carousel demo-carousel">
-        <div class="item has-text-centered">
-          <canvas id="canvas_s0" class="webgl" style="height: 100%; width: 100%;"></canvas>
-          <h2 class="subtitle has-text-centered">
-            Table-31249
-          </h2>
-        </div>
-
-        <div class="item has-text-centered">
-          <canvas id="canvas_s1" class="webgl" style="height: 100%; width: 100%;"></canvas>
-          <h2 class="subtitle has-text-centered">
-            Storage-47648
-          </h2>
-        </div>
-
-        <div class="item has-text-centered">
-          <canvas id="canvas_s2" class="webgl" style="height: 100%; width: 100%;"></canvas>
-          <h2 class="subtitle has-text-centered">
-            Storage-45503
-          </h2>
-        </div>
-
-        <div class="item has-text-centered">
-          <canvas id="canvas_s3" class="webgl" style="height: 100%; width: 100%;"></canvas>
-          <h2 class="subtitle has-text-centered">
-            Oven-101918
-          </h2>
-        </div>
-
-        <div class="item has-text-centered">
-          <canvas id="canvas_s4" class="webgl" style="height: 100%; width: 100%;"></canvas>
-          <h2 class="subtitle has-text-centered">
-            Table-25493
-          </h2>
-        </div>
-
-      </div>
-    </div>
-
-    <hr>
-
-    <div id="teaser-demo" class="container is-max-desktop">
-      <div class="has-text-centered">
-        <h2 class="title is-3">Interactable Meshes of Complex Real-world Objects</h2>
-        <h2 class="subtitle"><sup>*</sup>Drag mouse to rotate & scroll wheel to zoom in/out</h2>
-      </div>
-      <h3 class="title is-4">Images</h3>
-      <div class="hero-body">
-        <div class="container is-max-desktop">
-          <div class="columns is-centered has-text-centered">
-            <div class="column is-four-fifths">
-              <div class="content has-text-justified">
-                <img src="static/images/real_scene.png"/>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <h3 class="title is-4">Interactable Replicas</h3>
-      <div class="carousel demo-carousel">
-        <div class="item has-text-centered">
-          <canvas id="canvas0" class="webgl" style="height: 100%; width: 100%;"></canvas>
-          <h2 class="subtitle has-text-centered">
-            Whole scene
-          </h2>
-        </div>
-
-        <div class="item has-text-centered">
-          <canvas id="canvas1" class="webgl" style="height: 100%; width: 100%;"></canvas>
-          <h2 class="subtitle has-text-centered">
-            cabinet-1r
-          </h2>
-        </div>
-
-        <div class="item has-text-centered">
-          <canvas id="canvas2" class="webgl" style="height: 100%; width: 100%;"></canvas>
-          <h2 class="subtitle has-text-centered">
-            cabinet-1r2p
-          </h2>
-        </div>
-
-        <div class="item has-text-centered">
-          <canvas id="canvas3" class="webgl" style="height: 100%; width: 100%;"></canvas>
-          <h2 class="subtitle has-text-centered">
-            microwave
-          </h2>
-        </div>
-
-        <div class="item has-text-centered">
-          <canvas id="canvas4" class="webgl" style="height: 100%; width: 100%;"></canvas>
-          <h2 class="subtitle has-text-centered">
-            cabinet-3r
-          </h2>
-        </div>
-
-        <div class="item has-text-centered">
-          <canvas id="canvas5" class="webgl" style="height: 100%; width: 100%;"></canvas>
-          <h2 class="subtitle has-text-centered">
-            washing-machine
-          </h2>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- <div id="teaser-demo" class="container is-max-desktop">
-      <div class="has-text-centered">
-        <h2 class="title is-3">Reconstruction of 2-part Synthetic Objects</h2>
-        <h2 class="subtitle"><sup>*</sup>Drag mouse to rotate & scroll wheel to zoom in/out</h2>
-      </div>
-      <div class="carousel demo-carousel">
-        <div class="item has-text-centered">
-          <canvas id="canvas_ps0" class="webgl" style="height: 100%; width: 100%;"></canvas>
-          <h2 class="subtitle has-text-centered">
-            blade_103706
-          </h2>
-        </div>
-
-        <div class="item has-text-centered">
-          <canvas id="canvas_ps1" class="webgl" style="height: 100%; width: 100%;"></canvas>
-          <h2 class="subtitle has-text-centered">
-            oven_101917
-          </h2>
-        </div>
-
-        <div class="item has-text-centered">
-          <canvas id="canvas_ps2" class="webgl" style="height: 100%; width: 100%;"></canvas>
-          <h2 class="subtitle has-text-centered">
-            scissor_11100
-          </h2>
-        </div>
-
-        <div class="item has-text-centered">
-          <canvas id="canvas_ps3" class="webgl" style="height: 100%; width: 100%;"></canvas>
-          <h2 class="subtitle has-text-centered">
-            USB_100109
-          </h2>
-        </div>
-
-        <div class="item has-text-centered">
-          <canvas id="canvas_ps4" class="webgl" style="height: 100%; width: 100%;"></canvas>
-          <h2 class="subtitle has-text-centered">
-            stapler_103111
-          </h2>
-        </div>
-
-        <div class="item has-text-centered">
-          <canvas id="canvas_ps5" class="webgl" style="height: 100%; width: 100%;"></canvas>
-          <h2 class="subtitle has-text-centered">
-            washer_103776
-          </h2>
-        </div>
-
-        <div class="item has-text-centered">
-          <canvas id="canvas_ps6" class="webgl" style="height: 100%; width: 100%;"></canvas>
-          <h2 class="subtitle has-text-centered">
-            storage_45135
-          </h2>
-        </div>
-
-        <div class="item has-text-centered">
-          <canvas id="canvas_ps7" class="webgl" style="height: 100%; width: 100%;"></canvas>
-          <h2 class="subtitle has-text-centered">
-            fridge_10905
-          </h2>
-        </div>
-
-        <div class="item has-text-centered">
-          <canvas id="canvas_ps8" class="webgl" style="height: 100%; width: 100%;"></canvas>
-          <h2 class="subtitle has-text-centered">
-            laptop_10211
-          </h2>
-        </div>
-
-        <div class="item has-text-centered">
-          <canvas id="canvas_ps9" class="webgl" style="height: 100%; width: 100%;"></canvas>
-          <h2 class="subtitle has-text-centered">
-            foldchair_102255
-          </h2>
-        </div>
-      </div>
-    </div> -->
-  </div>
-</section>
-<!-- End teaser demo -->
-
-
 <!-- Video carousel -->
 <section class="hero is-small is-light">
   <div class="hero-body">
@@ -636,8 +366,283 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
+<!-- End video carousel -->
+
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="has-text-centered">
+        <h2 class="title is-3">Simulation in IsaacSim</h2>
+      </div>
+      <br><br>
+      <video autoplay controals loop muted>
+        <source src="./video/isaac.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+
+
+<!-- Paper abstract -->
+<!-- <section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Building articulated objects is a key challenge in computer
+              vision. Existing methods often fail to effectively integrate information across
+              different object states, limiting the accuracy of part-mesh reconstruction and part
+              dynamics modeling, particularly for complex multi-part articulated objects. We
+              introduce ArtGS, a novel approach that leverages 3D Gaussians as a flexible and
+              efficient representation to address these issues. Our method incorporates canonical
+              Gaussians with coarse-to-fine initialization and updates for aligning articulated
+              part information across different object states, and employs a skinning-inspired
+              part dynamics modeling module to improve both part-mesh reconstruction and
+              articulation learning. Extensive experiments on both synthetic and real-world
+              datasets, including a new benchmark for complex multi-part objects, demonstrate
+              that ArtGS achieves state-of-the-art performance in joint parameter estimation
+              and part mesh reconstruction. Our approach significantly improves reconstruction
+              quality and efficiency, especially for multi-part articulated objects. Additionally, we
+              provide comprehensive analyses of our design choices, validating the effectiveness
+              of each component to highlight potential areas for future improvement.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+<!-- End paper abstract -->
+
+
+<!-- Paper abstract -->
+<!-- <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Method Overview</h2>
+          <div class="content has-text-justified">
+            <img src="static/images/method.png"/>
+            <p>
+              The overview of ArtGS. Our method is divided into two stages: (i) obtaining coarse canonical
+              Gaussians \(G^c_{\text{init}}\) by matching the Gaussians \(G^0_{\text{single}}\) and \(G^1_{\text{single}}\) 
+              trained with each single-state individually and
+              initializing the part assignment module with clustered centers, (ii) jointly optimizing canonical Gaussians \(G^c\)
+              and the articulation model (including the articulation parameters \(\Phi\) and the part assignment module).
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+<!-- End paper abstract -->
+
+<!-- Teaser demo-->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div id="teaser-demo" class="container is-max-desktop">
+      <div class="has-text-centered">
+        <h2 class="title is-3">Interactable Meshes of Complex Synthetic Objects</h2>
+        <h2 class="subtitle"><sup>*</sup>Drag mouse to rotate & scroll wheel to zoom in/out</h2>
+      </div>
+      <div class="carousel demo-carousel">
+        <div class="item has-text-centered">
+          <canvas id="canvas_s0" class="webgl" style="height: 100%; width: 100%;"></canvas>
+          <h2 class="subtitle has-text-centered">
+            Table-31249
+          </h2>
+        </div>
+
+        <div class="item has-text-centered">
+          <canvas id="canvas_s1" class="webgl" style="height: 100%; width: 100%;"></canvas>
+          <h2 class="subtitle has-text-centered">
+            Storage-47648
+          </h2>
+        </div>
+
+        <div class="item has-text-centered">
+          <canvas id="canvas_s2" class="webgl" style="height: 100%; width: 100%;"></canvas>
+          <h2 class="subtitle has-text-centered">
+            Storage-45503
+          </h2>
+        </div>
+
+        <div class="item has-text-centered">
+          <canvas id="canvas_s3" class="webgl" style="height: 100%; width: 100%;"></canvas>
+          <h2 class="subtitle has-text-centered">
+            Oven-101918
+          </h2>
+        </div>
+
+        <div class="item has-text-centered">
+          <canvas id="canvas_s4" class="webgl" style="height: 100%; width: 100%;"></canvas>
+          <h2 class="subtitle has-text-centered">
+            Table-25493
+          </h2>
+        </div>
+
+      </div>
+    </div>
+
     <hr>
 
+    <div id="teaser-demo" class="container is-max-desktop">
+      <div class="has-text-centered">
+        <h2 class="title is-3">Interactable Meshes of Complex Real-world Objects</h2>
+        <h2 class="subtitle"><sup>*</sup>Drag mouse to rotate & scroll wheel to zoom in/out</h2>
+      </div>
+      <h3 class="title is-4">Images</h3>
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <div class="content has-text-justified">
+                <img src="static/images/real_scene.png"/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="title is-4">Interactable Replicas</h3>
+      <div class="carousel demo-carousel">
+        <div class="item has-text-centered">
+          <canvas id="canvas0" class="webgl" style="height: 100%; width: 100%;"></canvas>
+          <h2 class="subtitle has-text-centered">
+            Whole scene
+          </h2>
+        </div>
+
+        <div class="item has-text-centered">
+          <canvas id="canvas1" class="webgl" style="height: 100%; width: 100%;"></canvas>
+          <h2 class="subtitle has-text-centered">
+            cabinet-1r
+          </h2>
+        </div>
+
+        <div class="item has-text-centered">
+          <canvas id="canvas2" class="webgl" style="height: 100%; width: 100%;"></canvas>
+          <h2 class="subtitle has-text-centered">
+            cabinet-1r2p
+          </h2>
+        </div>
+
+        <div class="item has-text-centered">
+          <canvas id="canvas3" class="webgl" style="height: 100%; width: 100%;"></canvas>
+          <h2 class="subtitle has-text-centered">
+            microwave
+          </h2>
+        </div>
+
+        <div class="item has-text-centered">
+          <canvas id="canvas4" class="webgl" style="height: 100%; width: 100%;"></canvas>
+          <h2 class="subtitle has-text-centered">
+            cabinet-3r
+          </h2>
+        </div>
+
+        <div class="item has-text-centered">
+          <canvas id="canvas5" class="webgl" style="height: 100%; width: 100%;"></canvas>
+          <h2 class="subtitle has-text-centered">
+            washing-machine
+          </h2>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- <div id="teaser-demo" class="container is-max-desktop">
+      <div class="has-text-centered">
+        <h2 class="title is-3">Reconstruction of 2-part Synthetic Objects</h2>
+        <h2 class="subtitle"><sup>*</sup>Drag mouse to rotate & scroll wheel to zoom in/out</h2>
+      </div>
+      <div class="carousel demo-carousel">
+        <div class="item has-text-centered">
+          <canvas id="canvas_ps0" class="webgl" style="height: 100%; width: 100%;"></canvas>
+          <h2 class="subtitle has-text-centered">
+            blade_103706
+          </h2>
+        </div>
+
+        <div class="item has-text-centered">
+          <canvas id="canvas_ps1" class="webgl" style="height: 100%; width: 100%;"></canvas>
+          <h2 class="subtitle has-text-centered">
+            oven_101917
+          </h2>
+        </div>
+
+        <div class="item has-text-centered">
+          <canvas id="canvas_ps2" class="webgl" style="height: 100%; width: 100%;"></canvas>
+          <h2 class="subtitle has-text-centered">
+            scissor_11100
+          </h2>
+        </div>
+
+        <div class="item has-text-centered">
+          <canvas id="canvas_ps3" class="webgl" style="height: 100%; width: 100%;"></canvas>
+          <h2 class="subtitle has-text-centered">
+            USB_100109
+          </h2>
+        </div>
+
+        <div class="item has-text-centered">
+          <canvas id="canvas_ps4" class="webgl" style="height: 100%; width: 100%;"></canvas>
+          <h2 class="subtitle has-text-centered">
+            stapler_103111
+          </h2>
+        </div>
+
+        <div class="item has-text-centered">
+          <canvas id="canvas_ps5" class="webgl" style="height: 100%; width: 100%;"></canvas>
+          <h2 class="subtitle has-text-centered">
+            washer_103776
+          </h2>
+        </div>
+
+        <div class="item has-text-centered">
+          <canvas id="canvas_ps6" class="webgl" style="height: 100%; width: 100%;"></canvas>
+          <h2 class="subtitle has-text-centered">
+            storage_45135
+          </h2>
+        </div>
+
+        <div class="item has-text-centered">
+          <canvas id="canvas_ps7" class="webgl" style="height: 100%; width: 100%;"></canvas>
+          <h2 class="subtitle has-text-centered">
+            fridge_10905
+          </h2>
+        </div>
+
+        <div class="item has-text-centered">
+          <canvas id="canvas_ps8" class="webgl" style="height: 100%; width: 100%;"></canvas>
+          <h2 class="subtitle has-text-centered">
+            laptop_10211
+          </h2>
+        </div>
+
+        <div class="item has-text-centered">
+          <canvas id="canvas_ps9" class="webgl" style="height: 100%; width: 100%;"></canvas>
+          <h2 class="subtitle has-text-centered">
+            foldchair_102255
+          </h2>
+        </div>
+      </div>
+    </div> -->
+  </div>
+</section>
+<!-- End teaser demo -->
+
+
+
+<section class="hero is-small is-light">
+  <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="has-text-centered">
         <h2 class="title is-3">Additional Comparisons on Data from <a href="https://github.com/zubair-irshad/articulated-object-nerf" target="_blank">AONRF</a></h2>
@@ -664,10 +669,9 @@
         </div>
       </div>
       <h1 class="title is-4 has-text-centered">laptop 11586</h1>
-      </div>
+    </div>
   </div>
 </section>
-<!-- End video carousel -->
 
 <script src="./animate.js" type="module"></script>
 
