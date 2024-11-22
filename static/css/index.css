@@ -169,6 +169,7 @@ h4 {
 }
 
 .figure-container {
+  justify-content: center;
   display: flex;
   align-items: center; 
   margin-bottom: 20px; 
@@ -180,5 +181,5 @@ h4 {
 }
 
 .figure-container img {
-  width: 80%;
+  width: 200%;
 }

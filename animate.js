@@ -5,7 +5,7 @@ import { DRACOLoader } from 'https://unpkg.com/three@0.127.0/examples/jsm/loader
 
 const W_H = 16 / 9;
 const allModelUrl = [
-  './glb/table_31249.glb', './glb/storage_47648.glb', './glb/storage_45503.glb', './glb/oven_101908.glb', './glb/table_25493.glb', 
+  './glb/table_31249.glb', './glb/storage_47648.glb', './glb/storage_45503.glb', './glb/oven_101918.glb', './glb/table_25493.glb', 
   './glb/all.glb', 
   './glb/cab1r.glb', './glb/cab1r2p.glb', './glb/microwave.glb', './glb/cab3r.glb', './glb/washing_machine.glb',
   // './glb/blade_103706.glb', './glb/oven_101917.glb', './glb/scissor_11100.glb', './glb/USB_100109.glb', './glb/stapler_103111.glb', 
